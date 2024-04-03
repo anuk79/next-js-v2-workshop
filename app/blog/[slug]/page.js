@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+const API_URL = process.env.API_URL;
+
 export const generateMetadata = ({ params }) => {
     return {
         title: `Blog: ${params.slug}`
@@ -7,7 +9,7 @@ export const generateMetadata = ({ params }) => {
 }
 
 async function getBlogDetails(id) {
-    const response = await fetch(`http://localhost:3000/api/blog/${id}`, {
+    const response = await fetch(`${API_URL}/blog/${id}`, {
         method: 'GET',
     });
     return response.json();

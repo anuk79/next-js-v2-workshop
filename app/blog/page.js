@@ -1,7 +1,9 @@
 import Link from 'next/link';
 
+const API_URL = process.env.API_URL;
+
 async function getBlogPosts() {
-    const response = await fetch("http://localhost:3000/api/blog", {
+    const response = await fetch(`${API_URL}/blog`, {
         method: 'GET',
     });
     return response.json();

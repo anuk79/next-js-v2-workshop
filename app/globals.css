@@ -87,17 +87,37 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0;
+  min-height: 100vh;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  font-weight: 700;
+  text-decoration-style: double;
+}
+
+ul {
+  margin: 2rem 1rem;
+}
+
+li {
+  padding-bottom: 1rem;
+}
+
+.blog a {
+  display: block;
+  padding: 0.8rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
